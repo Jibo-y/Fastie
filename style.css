@@ -25,12 +25,21 @@
   color: white;
 }
 .header h1 {
-  color: #34495E;
-
+  color: White;
+  font-size: 75px;
+  padding top: 3%;
+  text-align: center;
+  width: 100%;
 }
 
 .header h2 {
   color: White;
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
 }
 
 .header h4 {
@@ -39,4 +48,8 @@
 
 p {
   color: white;
+  text-align: center;
+  font-style: italic;
+  font-size: 25px;
+  padding-bottom: 50%;
 }

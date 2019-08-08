@@ -1,15 +1,39 @@
-const welcomeButton = document.querySelector('#button');
+<button onclick="window.location='http://www.example.com';">Visit Page Now</button>
+<script>
+    function visitPage(){
+        window.location='http://www.example.com';
+    }
+</script>
+<button onclick="visitPage();">Visit Page Now</button>
 
-welcomeButton.addEventListener('click', (event) =>{
 
+
+
+
+
+
+
+
+
+
+// const welcomeButton = document.querySelector('#button');
 //
-console.log('Like button clicked!');
-  welcomeButton.style.fontSize = "200%";
-  // likeButton.innerHTML += "d!!!";
-  // likeButton.style.backgroundColor = "pink";
-
-
-
-
-
-});
+// welcomeButton.addEventListener('click', (event) =>{
+//
+// console.log('welcome button clicked!');
+//   // welcomeButton.style.fontSize = "200%";
+// });
+//
+// const serviceButton = document.querySelector('#button');
+//
+// serviceButton.addEventListener('click', (event) => {
+//
+// console.log('service button clicked');
+//
+// });
+//
+// const emetroButton = document.querySelector('#button');
+//
+// emetroButton.addEventListener('click', (event) => {
+//
+// });

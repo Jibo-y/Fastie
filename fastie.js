@@ -1,10 +1,11 @@
 // <button onclick="window.location='http://www.example.com';">Visit Page Now</button>
-<script>
-    function visitPage(){
-        window.location='http://www.example.com';
-    }
-</script>
-<button onclick="visitPage();">Visit Page Now</button>
+// <script>
+//     function visitPage(){
+//         window.location='http://www.example.com';
+//     }
+// </script>
+// <button onclick="visitPage();">Visit Page Now</button>
+
 
 
 

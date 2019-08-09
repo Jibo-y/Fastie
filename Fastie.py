@@ -1,7 +1,6 @@
 import webapp2
 import jinja2
 import os
-import random
 from models import Emetrocard
 
 the_jinja_env = jinja2.Environment(

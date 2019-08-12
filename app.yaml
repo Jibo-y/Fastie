@@ -7,10 +7,11 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /.*
-  script: Fastie.app
 - url: /public
   static_dir: static
+- url: /.*
+  script: Fastie.app
+
 
 
 libraries:

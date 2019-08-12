@@ -1,6 +1,7 @@
 import webapp2
 import jinja2
 import os
+import random
 from model import Emetrocard
 from google.appengine.api import users
 
@@ -26,16 +27,24 @@ class EmetrocardHandler(webapp2.RequestHandler):
 
     def post(self):
         Emetrocard_card_number = self.request.get('user-card-number')
-        Emetrocard_card_expiration_date = self.request.get('user-expiration-date')
+        Emetrocard_expiration_date = self.request.get('user-expiration-date')
         Emetrocard_choice = self.request.get('Emetrocard-type')
 
         user_Emetrocard = Emetrocard(
             Emetrocard_line1 = Emetrocard_card_number,
             Emetrocard_line2 = Emetrocard_expiration_date,
             Emetrocard_choice = Emetrocard_choice,
-            Emetrocard_balance = random.choice()
+            Emetrocard_balance = random.randint(0,100)
         )
         user_Emetrocard.put()
+
+        card_dict = {
+            "line1": Emetrocard_card_number,
+            "line2": Emetrocard_expiration_date,
+            "img_url": "https://upload.wikimedia.org/wikipedia/en/8/8b/MetroCard.SVG"
+            "balance": random.choice()
+            }
+        self.response.write(Emetrocard_template.render(card_dict))
 
     def deposit(self, d_amount):
         if d_amount < 0:

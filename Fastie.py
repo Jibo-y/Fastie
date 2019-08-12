@@ -11,7 +11,11 @@ the_jinja_env = jinja2.Environment(
 class welcomeHandler(webapp2.requestHandler):
     def get(self):
         welcome_template = the_jinja_env.get_template('templates/welcome.html')
-        self.response.write(welcome_template.render())
+        variable_dict = {
+        "login_url": users.create_login_url('/'),
+        "logout_url":users.create_logout_url('/'),
+        }
+        self.response.write(welcome_template.render(variable_dict))
 
 class EmetrocardHandler(webapp2.requestHandler):
     def get(self):
@@ -42,10 +46,12 @@ class EmetrocardHandler(webapp2.requestHandler):
 class serviceHandler(webapp2.requestHandler):
     def get(self):
         service_template = the_jinja_env.get_template('templates/trainservices.html')
+        self.response.write(Emetrocard_template.render())
 
 class ScheduleHandler(webapp2.requestHandler):
     def get(self):
         schedule_template = the_jinja_env.get_template('templates/schedule.html')
+        self.response.write(Emetrocard_template.render())
 
 app = webapp2.WSGIApplication([
     ('/', EmetrocardHandler),

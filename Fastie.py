@@ -1,23 +1,24 @@
 import webapp2
 import jinja2
 import os
-from models import Emetrocard
+from model import Emetrocard
+from google.appengine.api import users
 
 the_jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-class welcomeHandler(webapp2.requestHandler):
+class welcomeHandler(webapp2.RequestHandler):
     def get(self):
-        welcome_template = the_jinja_env.get_template('templates/welcome.html')
+        welcome_template = the_jinja_env.get_template('templates/index.html')
         variable_dict = {
         "login_url": users.create_login_url('/'),
         "logout_url":users.create_logout_url('/'),
         }
         self.response.write(welcome_template.render(variable_dict))
 
-class EmetrocardHandler(webapp2.requestHandler):
+class EmetrocardHandler(webapp2.RequestHandler):
     def get(self):
         Emetrocard_template = the_jinja_env.get_template('templates/E-metrocard.html')
 
@@ -43,19 +44,19 @@ class EmetrocardHandler(webapp2.requestHandler):
             self.Emetrocard_balance = self.Emetrocard_balance + d_amount
             user_Emetrocard.put()
 
-class serviceHandler(webapp2.requestHandler):
+class serviceHandler(webapp2.RequestHandler):
     def get(self):
         service_template = the_jinja_env.get_template('templates/trainservices.html')
         self.response.write(Emetrocard_template.render())
 
-class ScheduleHandler(webapp2.requestHandler):
+class ScheduleHandler(webapp2.RequestHandler):
     def get(self):
         schedule_template = the_jinja_env.get_template('templates/schedule.html')
         self.response.write(Emetrocard_template.render())
 
 app = webapp2.WSGIApplication([
-    ('/', EmetrocardHandler),
-    ('/Emetrocard', ShowbalanceHandler),
-    ('/service', serviceHandler)
-    ('/schedule' scheduleHandler)
+    ('/', welcomeHandler),
+    ('/Emetrocard', EmetrocardHandler),
+    ('/service', serviceHandler),
+    ('/schedule', ScheduleHandler)
 ], debug=True)

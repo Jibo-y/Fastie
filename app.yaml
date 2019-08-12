@@ -9,9 +9,6 @@ threadsafe: true
 handlers:
 - url: /.*
   script: Fastie.app
-- url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
 - url: /public
   static_dir: static
 

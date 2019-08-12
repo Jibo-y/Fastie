@@ -99,7 +99,8 @@ p {
 .team {
 
     padding: 50px 0 80px;
-    text-align: center;
+    text-align: 40px;
+
 }
 
 .team strong,
@@ -113,15 +114,17 @@ p {
 
 .team p {
 
-    color: #737373;
+    color: white;
 }
 
 .team img {
 
      height: 150px;
-     width: 150px;
+     width: 60%;
      margin-top: 80px;
- }
+
+}
+
 
 .team i {
 
@@ -139,18 +142,23 @@ p {
     background-color: #709963;
 }
 
+.team h4 {
+  color: white;
+}
+
 .team h2 {
   color: white;
   padding-bottom: 1%;
 
 }
 
-.col-lg-3 col-md-3 body {
-  background-color: white;
+.team strong {
+  color: black;
 }
 
 .row p {
   padding: 1%;
   color: white;
-
 }
+
+.profile 

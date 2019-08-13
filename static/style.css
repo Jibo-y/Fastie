@@ -1,3 +1,29 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #050100;
+  overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
 .header h1 {
   color: White;
   font-size: 75px;
@@ -73,8 +99,7 @@ p {
 .team {
 
     padding: 50px 0 80px;
-    text-align: 40px;
-
+    text-align: center;
 }
 
 .team strong,
@@ -88,17 +113,15 @@ p {
 
 .team p {
 
-    color: white;
+    color: #737373;
 }
 
 .team img {
 
      height: 150px;
-     width: 60%;
+     width: 150px;
      margin-top: 80px;
-
-}
-
+ }
 
 .team i {
 
@@ -116,23 +139,18 @@ p {
     background-color: #709963;
 }
 
-.team h4 {
-  color: white;
-}
-
 .team h2 {
   color: white;
   padding-bottom: 1%;
 
 }
 
-.team strong {
-  color: black;
+.col-lg-3 col-md-3 body {
+  background-color: white;
 }
 
 .row p {
   padding: 1%;
   color: white;
-}
 
-.profile
+}

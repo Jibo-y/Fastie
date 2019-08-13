@@ -7,8 +7,9 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /css
-  static_dir: static
+- url: /images
+  static_dir: images
+  
 - url: /public
   static_dir: static
 - url: /.*

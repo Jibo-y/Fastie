@@ -23,7 +23,6 @@
 .header h4 {
   color: White;
 }
-
 p {
   color: white;
   text-align: center;
@@ -82,7 +81,7 @@ p {
 .team h4 {
 
     margin: 20px 0 20px;
-    color: #4c4c4c;
+    color: #FFF9FA;
 }
 
 
@@ -98,9 +97,8 @@ p {
      margin-top: 80px;
      margin-left: auto;
      margin-right: auto;
-    
-}
 
+}
 
 .team i {
 
@@ -112,14 +110,16 @@ p {
     background-color: #a0db8e;
     color: #fff;
 }
-
+#team{
+  align-content: center;
+}
 .team a:hover i {
 
     background-color: #709963;
 }
 
 .team h4 {
-  color: white;
+  color: #FFF9FA;
 }
 
 .team h2 {
@@ -128,7 +128,7 @@ p {
 
 }
 .profile h4 {
-  color: white;
+  color: #FFF9FA;
 }
 
 .row h2 {
@@ -141,6 +141,6 @@ p {
   color: white;
 }
 
-.profile h4 {
-  color: white;
+.profile {
+   align-content: center;
 }

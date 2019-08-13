@@ -1,6 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <h1>Your virtual Metro Card</h1>
   <p>Add value on the go anytime, anywhere!</p>
-  
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body style="background-image: url(https://www.color-hex.com/palettes/3043.png);">
+  <div class="w3-container">
+    <h2>Card Content</h2>
+    <p>Add containers inside the card to create different sections:</p>
+
+    <div class="w3-card-4" style="width:50%;">
+      <header class="w3-container w3-blue">
+  	<p>
+      <h1>E-Metro</h1>
+      </p>
+      </header>
+
+      <div class="w3-container">
+        <p><h5><b>Stay alert on station platforms.</b></h5>
+  	  <form id='form'>
+          <input type="text" style="color: #888; padding: 10px 0; margin-bottom: 10px;" name = "card" value="Card number" onfocus="inputFocus(this)" onblur="inputBlur(this)"> </input>
+          <input type="text" style="color: #888; padding: 10px 0;margin-bottom: 10px;" name =" expiration" value="Expiration Date" onfocus="inputFocus(this)" onblur="inputBlur(this)"> </input>
+        </form>
+        <button type="submit" onClick="randomNum()"> Submit </button>
+      </div>
+
+    </div>
+  </div>
+
+     <div id="balance">
+       <div class="row">
+         <h3 id="balance-value">Balance:</h3>
+         <script>
+         function inputFocus(i) {
+             if (i.value == i.defaultValue) { i.value = ""; i.style.color = "#000"; }
+         }
+         function inputBlur(i) {
+             if (i.value == "") { i.value = i.defaultValue; i.style.color = "#888"; }
+         }
+
+         function randomNum() {
+           document.getElementById("balance-value").innerHTML = "Balance: $" + Math.round(Math.random() * 100);
+         }
+
+         function logSubmit(event) {
+          log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
+          event.preventDefault();
+          }
+          form.addEventListener('submit', logSubmit);
+         </script>
+   </body>
+   </html>

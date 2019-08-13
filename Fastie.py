@@ -74,5 +74,5 @@ app = webapp2.WSGIApplication([
     ('/Emetrocard', EmetrocardHandler),
     ('/service', serviceHandler),
     ('/schedule', ScheduleHandler),
-    ('/route', routeHandler)
+    ('/route', routesHandler)
 ], debug=True)

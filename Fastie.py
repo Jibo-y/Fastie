@@ -41,7 +41,7 @@ class EmetrocardHandler(webapp2.RequestHandler):
         card_dict = {
             "line1": Emetrocard_card_number,
             "line2": Emetrocard_expiration_date,
-            "img_url": "https://upload.wikimedia.org/wikipedia/en/8/8b/MetroCard.SVG"
+            "img_url": "https://upload.wikimedia.org/wikipedia/en/8/8b/MetroCard.SVG",
             "balance": random.choice()
             }
         self.response.write(Emetrocard_template.render(card_dict))

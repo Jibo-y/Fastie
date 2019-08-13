@@ -125,14 +125,16 @@ p {
   padding-bottom: 1%;
 
 }
+.profile h4 {
+  color: white;
+}
 
-.team strong {
-  color: black;
+.row h2 {
+  padding-bottom: 5%;
+
 }
 
 .row p {
   padding: 1%;
   color: white;
 }
-
-.profile

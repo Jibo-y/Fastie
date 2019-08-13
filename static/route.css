@@ -5,7 +5,8 @@
 
 }
 .photo{
-  width:  33%;
+  width:  50%;
+  height: 50%;
 }
 #p1 {
   grid-column-start: 1;

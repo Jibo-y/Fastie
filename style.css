@@ -73,7 +73,7 @@ p {
 .team {
 
     padding: 50px 0 80px;
-    text-align: 40px;
+    text-align: auto;
 
 }
 
@@ -96,7 +96,9 @@ p {
      height: 150px;
      width: 60%;
      margin-top: 80px;
-
+     margin-left: auto;
+     margin-right: auto;
+    
 }
 
 
@@ -136,5 +138,9 @@ p {
 
 .row p {
   padding: 1%;
+  color: white;
+}
+
+.profile h4 {
   color: white;
 }

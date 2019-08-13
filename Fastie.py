@@ -55,8 +55,14 @@ class EmetrocardHandler(webapp2.RequestHandler):
 
 class routesHandler(webapp2.RequestHandler):
     def get(self):
+<<<<<<< HEAD
         routes_template = the_jinja_env.get_template('templates/route.html')
         self.response.write(routes_template.render())
+=======
+        route_template = the_jinja_env.get_template('templates/route.html')
+        self.response.write(route_template.render())
+
+>>>>>>> 806b99f5235c14b67ec057c92266f67040205647
 
 class serviceHandler(webapp2.RequestHandler):
     def get(self):
@@ -73,5 +79,9 @@ app = webapp2.WSGIApplication([
     ('/Emetrocard', EmetrocardHandler),
     ('/service', serviceHandler),
     ('/schedule', ScheduleHandler),
+<<<<<<< HEAD
     ('/route', routesHandler),
+=======
+    ('/route', routesHandler)
+>>>>>>> 806b99f5235c14b67ec057c92266f67040205647
 ], debug=True)

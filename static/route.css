@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 4fr;
+
+}
+.photo{
+  width:  33%;
+}
+#p1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background: url("file:///Users/google/Downloads/route1.jpg");
+}
+
+#p2 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background: url("file:///Users/google/Downloads/route2.jpg");
+}
+
+#p3 {
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background: url("file:///Users/google/maps2.jpg");
+}
